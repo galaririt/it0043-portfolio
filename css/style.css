@@ -32,9 +32,17 @@ h1 {
     font-size: var(--text-heading);
 }
 
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-small);
+}
+
 nav a {
+    display: inline-block;
     color: var(--color-white);
     margin-right: var(--space-medium);
+    padding: var(--space-small);
 }
 
 nav a:hover {
