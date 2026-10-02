@@ -1,39 +1,67 @@
+:root {
+    --color-background: #cfeaf0;
+    --color-dark: #17202a;
+    --color-accent: #f4c542;
+    --color-button: #e8784b;
+    --color-white: #ffffff;
+
+    --space-small: 10px;
+    --space-medium: 20px;
+    --space-large: 30px;
+
+    --text-body: 16px;
+    --text-heading: 40px;
+    --text-subheading: 24px;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #cfeaf0;
-    color: #17202a;
+    font-size: var(--text-body);
+    background-color: var(--color-background);
+    color: var(--color-dark);
 }
 
 header {
-    background-color: #17202a;
-    color: white;
-    padding: 30px;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: var(--space-large);
 }
 
 h1 {
-    font-size: 40px;
+    font-size: var(--text-heading);
 }
 
 nav a {
-    color: white;
-    margin-right: 20px;
+    color: var(--color-white);
+    margin-right: var(--space-medium);
+}
+
+nav a:hover {
+    background-color: var(--color-button);
+    color: var(--color-white);
+}
+
+nav a:focus {
+    outline: 3px solid var(--color-button);
 }
 
 main {
     width: 80%;
-    margin: 30px auto;
+    margin: var(--space-large) auto;
 }
 
-section {
-    background-color: white;
+section,
+.card {
+    background-color: var(--color-white);
     padding: 25px;
     margin-bottom: 25px;
-    border-left: 6px solid #e8784b;
+    border-left: 6px solid var(--color-button);
 }
 
 h2 {
-    color: #17202a;
+    color: var(--color-dark);
+    font-size: var(--text-subheading);
 }
 
 table {
@@ -43,52 +71,48 @@ table {
 
 th,
 td {
-    border: 1px solid #17202a;
-    padding: 10px;
+    border: 1px solid var(--color-dark);
+    padding: var(--space-small);
     text-align: left;
 }
 
 th {
-    background-color: #17202a;
-    color: white;
+    background-color: var(--color-dark);
+    color: var(--color-white);
 }
 
 input,
 textarea {
     width: 100%;
-    padding: 10px;
+    padding: var(--space-small);
     box-sizing: border-box;
 }
 
-button {
-    background-color: #e8784b;
-    color: white;
-    padding: 10px 20px;
+button,
+.button {
+    background-color: var(--color-button);
+    color: var(--color-white);
+    padding: var(--space-small) var(--space-medium);
     border: none;
 }
 
+button:hover,
+.button:hover {
+    background-color: var(--color-dark);
+}
+
+button:focus,
+.button:focus {
+    outline: 3px solid var(--color-accent);
+}
+
 footer {
-    background-color: #17202a;
-    color: white;
+    background-color: var(--color-dark);
+    color: var(--color-white);
     text-align: center;
-    padding: 20px;
-}
-nav a:hover {
-    background-color: #e8784b;
-    color: white;
+    padding: var(--space-medium);
 }
 
-nav a:focus {
-    outline: 3px solid #e8784b;
-}
-
-button:hover {
-    background-color: #17202a;
-}
-
-button:focus {
-    outline: 3px solid #f4c542;
-}
 @media (max-width: 600px) {
     h1 {
         font-size: 32px;
@@ -98,7 +122,8 @@ button:focus {
         width: 90%;
     }
 
-    section {
+    section,
+    .card {
         padding: 15px;
     }
 }
