@@ -134,4 +134,16 @@ footer {
     .card {
         padding: 15px;
     }
+
+    nav {
+        flex-wrap: nowrap;
+        gap: 0;
+    }
+
+    nav a {
+        margin-right: 0;
+        padding: 5px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
 }
